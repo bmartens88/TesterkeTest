@@ -1,7 +1,10 @@
+name: Conventional Commits
 on:
   pull_request:
     branches:
       - "**"
+permissions:
+  contents: read
 jobs:
   commit-lint:
     name: Verify Conventional Commits
