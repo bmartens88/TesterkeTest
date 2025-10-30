@@ -1,0 +1,13 @@
+{
+    "include-component-in-tag": true,
+    "include-v-in-tag": true,
+    "tag-separator": "@",
+    "separate-pull-requests": true,
+    "packages": {
+        "calculator": {
+            "path": "src/Calculator",
+            "release-type": "simple"
+        }
+    },
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json"
+}
