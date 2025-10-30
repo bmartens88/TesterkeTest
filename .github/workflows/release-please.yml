@@ -67,4 +67,5 @@ jobs:
         with:
           upload_url: ${{ needs.release-pr.outputs.upload_url }}
           asset_path: artifacts/*.nupkg
+          asset_name: "Calculator.${{ needs.release-pr.outputs.version }}.nupkg"
           asset_content_type: application/octet-stream
