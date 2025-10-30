@@ -4,8 +4,7 @@
     "tag-separator": "@",
     "separate-pull-requests": true,
     "packages": {
-        "calculator": {
-            "path": "src/Calculator",
+        ".": {
             "release-type": "simple",
             "changelog-path": "CHANGELOG.md",
             "bump-minor-pre-major": true,
