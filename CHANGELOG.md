@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/bmartens88/TesterkeTest/compare/v1.0.0...v1.1.0) (2025-10-30)
+
+
+### Features
+
+* **ci:** Build nuget package and upload release asset ([1dee61b](https://github.com/bmartens88/TesterkeTest/commit/1dee61b25e80f9c82648b978d9d39085751db07c))
+* **ci:** Build nuget package and upload release asset ([#18](https://github.com/bmartens88/TesterkeTest/issues/18)) ([16a2ca3](https://github.com/bmartens88/TesterkeTest/commit/16a2ca3703c8ec20e9678a2b16704c25494c207c))
+
+
+### Other Changes
+
+* Release ([ab926ec](https://github.com/bmartens88/TesterkeTest/commit/ab926ec46d9be37e0348cfe3134546cd746ed7b9))
+* Sync release 1.0.0 ([7577048](https://github.com/bmartens88/TesterkeTest/commit/75770489143c29539247db13ef735985acdb7cdc))
+
 ## 1.0.0 (2025-10-30)
 
 
