@@ -1,0 +1,56 @@
+name: Continuous Integration
+on:
+  pull_request:
+    branches:
+      - "develop"
+    types: [opened, synchronize, closed]
+permissions:
+  contents: read
+  actions: read
+  checks: write
+jobs:
+  continuous-integration:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout of code
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      
+      # Setup .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 9.0.x
+
+      # Setup cache for NuGet dependencies
+      - name: Cache NuGet dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('./**/*.sln') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget
+
+      # Restore NuGet dependencies
+      - name: Restore
+        run: dotnet restore
+
+      # Build application code
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+
+      # Test application code
+      - name: Test
+        run: dotnet test --configuration Release --no-build --verbosity normal --logger "trx;LogFilename=test-results.trx" --results-directory="./TestResults"
+
+      # Upload test results
+      - name: Publish test results
+        uses: dorny/test-reporter@v2
+        with:
+          name: XUnit tests
+          path: ./TestResults/*.trx
+          reporter: dotnet-trx
+          token: ${{ secrets.GITHUB_TOKEN }}
