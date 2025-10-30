@@ -9,6 +9,10 @@ permissions:
 jobs:
   release-pr:
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      version: ${{ steps.release.outputs.version }}
+      upload_url: ${{ steps.release.outputs.upload_url }}
     steps:
       - name: Create Release PR
         uses: googleapis/release-please-action@v4
