@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.3](https://github.com/bmartens88/TesterkeTest/compare/v1.1.2...v1.1.3) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Changed upload of asset to github cli ([2d80ea0](https://github.com/bmartens88/TesterkeTest/commit/2d80ea09afdb9d5a5e02db7ac986b22af35c9601))
+* **ci:** Changed upload of asset to github cli ([3cd8c33](https://github.com/bmartens88/TesterkeTest/commit/3cd8c33569f51f2d353cf42d43c14e45b4405e6e))
+
 ## [1.1.2](https://github.com/bmartens88/TesterkeTest/compare/v1.1.1...v1.1.2) (2025-10-30)
 
 
