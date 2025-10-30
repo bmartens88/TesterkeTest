@@ -7,27 +7,60 @@ permissions:
   contents: write
   pull-requests: write
 jobs:
-  release-please:
+  release-pr:
     runs-on: ubuntu-latest
-    outputs:
-      calculator--tag_name: ${{ steps.release.outputs.calculator--tag_name }}
-      calculator--release_created: ${{ steps.release.outputs.calculator--release_created }}
     steps:
-      - uses: actions/checkout@v5
-      - uses: googleapis/release-please-action@v4
+      - name: Create Release PR
+        uses: googleapis/release-please-action@v4
         id: release
         with:
           token: ${{ secrets.GH_TOKEN }}
           config-file: .github/release-please-config.json
           manifest-file: .github/release-please-manifest.json
-      - name: Print release outputs for debugging
-        continue-on-error: true
-        run: |
-          echo "Release outputs:"
-          echo "${{ toJson(steps.release.outputs) }}"
-  release-calculator:
-    if: ${{ needs.release-please.outputs.calculator--release_created }}
+  release-artifact:
+    if: ${{ needs.release-pr.outputs.release_created }}
     runs-on: ubuntu-latest
-    needs: release-please
+    needs: release-pr
     steps:
-      - uses: actions/checkout@v5
+      # Checkout of code
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      # Setup .NET SDK
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 9.0.x
+
+      # Setup cache for NuGet dependencies
+      - name: Cache NuGet dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('./**/*.sln') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget
+
+      # Restore NuGet dependencies
+      - name: Restore
+        run: dotnet restore
+
+      # Build application code
+      - name: Build
+        run: dotnet build --configuration Release --no-restore -p:Version=${{ needs.release-pr.outputs.version }}
+
+      # Build NuGet package
+      - name: Package
+        run: dotnet pack --configuration Release --no-build -p:Version=${{ needs.release-pr.outputs.version }} -o artifacts
+
+      # Upload build artifact to release
+      - name: Upload Release Artifact
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ needs.release-pr.outputs.upload_url }}
+          asset_path: artifacts/*.nupkg
+          asset_content_type: application/octet-stream
