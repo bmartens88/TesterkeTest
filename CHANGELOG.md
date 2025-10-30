@@ -1,5 +1,43 @@
 # Changelog
 
+## [1.1.3](https://github.com/bmartens88/TesterkeTest/compare/v1.1.2...v1.1.3) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Changed upload of asset to github cli ([2d80ea0](https://github.com/bmartens88/TesterkeTest/commit/2d80ea09afdb9d5a5e02db7ac986b22af35c9601))
+* **ci:** Changed upload of asset to github cli ([3cd8c33](https://github.com/bmartens88/TesterkeTest/commit/3cd8c33569f51f2d353cf42d43c14e45b4405e6e))
+
+## [1.1.2](https://github.com/bmartens88/TesterkeTest/compare/v1.1.1...v1.1.2) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Added asset_name to upload action ([756b4bb](https://github.com/bmartens88/TesterkeTest/commit/756b4bb435a921fabcfd0445ba2523e20c956cd5))
+* **ci:** Added asset_name to upload action ([#23](https://github.com/bmartens88/TesterkeTest/issues/23)) ([969d8af](https://github.com/bmartens88/TesterkeTest/commit/969d8af2a1d11bd7f691453df29ee10bae2d0653))
+
+## [1.1.1](https://github.com/bmartens88/TesterkeTest/compare/v1.1.0...v1.1.1) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Fix in output vars ([185c54b](https://github.com/bmartens88/TesterkeTest/commit/185c54be26cae9415103d9b957d85f90375addf6))
+* **ci:** Fix in output vars ([#21](https://github.com/bmartens88/TesterkeTest/issues/21)) ([171d65c](https://github.com/bmartens88/TesterkeTest/commit/171d65c17f3523895efc7f38d54cab7819f6b52d))
+
+## [1.1.0](https://github.com/bmartens88/TesterkeTest/compare/v1.0.0...v1.1.0) (2025-10-30)
+
+
+### Features
+
+* **ci:** Build nuget package and upload release asset ([1dee61b](https://github.com/bmartens88/TesterkeTest/commit/1dee61b25e80f9c82648b978d9d39085751db07c))
+* **ci:** Build nuget package and upload release asset ([#18](https://github.com/bmartens88/TesterkeTest/issues/18)) ([16a2ca3](https://github.com/bmartens88/TesterkeTest/commit/16a2ca3703c8ec20e9678a2b16704c25494c207c))
+
+
+### Other Changes
+
+* Release ([ab926ec](https://github.com/bmartens88/TesterkeTest/commit/ab926ec46d9be37e0348cfe3134546cd746ed7b9))
+* Sync release 1.0.0 ([7577048](https://github.com/bmartens88/TesterkeTest/commit/75770489143c29539247db13ef735985acdb7cdc))
+
 ## 1.0.0 (2025-10-30)
 
 
