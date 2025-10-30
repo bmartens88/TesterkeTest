@@ -30,9 +30,9 @@ jobs:
             exit 1
           }
 
-          # Rule 1: PRs to 'main'must come from 'release/*' or 'hotfix/*' branches
+          # Rule 1: PRs to 'main'must come from 'release-please--*', 'develop' or 'hotfix/*' branches
           if [[ "$TARGET_BRANCH" == "main" ]]; then
-            if ! [[ "$SOURCE_BRANCH" =~ ^(release|hotfix)/.+$ ]]; then
+            if ! [[ "$SOURCE_BRANCH" =~ ^(release-please--|hotfix)[/]?.+$ || "$SOURCE_BRANCH" == "develop" ]]; then
                 fail "PRs targeting 'main' must come from a 'release/*' or 'hotfix/*' branch."
             fi
           fi
