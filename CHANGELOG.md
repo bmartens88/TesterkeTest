@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.4](https://github.com/bmartens88/TesterkeTest/compare/v1.1.3...v1.1.4) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Added upload nuget to feed ([050455d](https://github.com/bmartens88/TesterkeTest/commit/050455dae8cfbf59244699e118ac249b497e3554))
+* **ci:** Added upload nuget to feed ([eaea60e](https://github.com/bmartens88/TesterkeTest/commit/eaea60e9f96112077ffa18976b89196985add033))
+
 ## [1.1.3](https://github.com/bmartens88/TesterkeTest/compare/v1.1.2...v1.1.3) (2025-10-30)
 
 
