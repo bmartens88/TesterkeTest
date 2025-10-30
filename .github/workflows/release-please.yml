@@ -1,0 +1,32 @@
+name: Release Please
+on:
+  push:
+    branches:
+      - "develop"
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      calculator--tag_name: ${{ steps.release.outputs.calculator--tag_name }}
+      calculator--release_created: ${{ steps.release.outputs.calculator--release_created }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: .github/release-please-config.json
+          manifest-file: .github/.release-please-manifest.json
+      - name: Print release outputs for debugging
+        continue-on-error: true
+        run: |
+          echo "Release outputs:"
+          echo "${{ toJson(steps.release.outputs) }}"
+  release-calculator:
+    if: ${{ needs.release-please.outputs.calculator--release_created }}
+    runs-on: ubuntu-latest
+    needs: release-please
+    steps:
+      - uses: actions/checkout@v5
