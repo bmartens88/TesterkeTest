@@ -37,6 +37,9 @@ jobs:
         uses: actions/setup-dotnet@v5
         with:
           dotnet-version: 9.0.x
+          source-url: https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Setup cache for NuGet dependencies
       - name: Cache NuGet dependencies
@@ -64,3 +67,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: gh release upload ${{ needs.release-pr.outputs.tag_name }} ./artifacts/Calculator.${{ needs.release-pr.outputs.version }}.nupkg
+
+      # Publish NuGet package
+      - name: Publish NuGet Package
+        run: dotnet nuget push ./artifacts/*.nupkg
