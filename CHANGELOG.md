@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1](https://github.com/bmartens88/TesterkeTest/compare/v1.1.0...v1.1.1) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Fix in output vars ([185c54b](https://github.com/bmartens88/TesterkeTest/commit/185c54be26cae9415103d9b957d85f90375addf6))
+* **ci:** Fix in output vars ([#21](https://github.com/bmartens88/TesterkeTest/issues/21)) ([171d65c](https://github.com/bmartens88/TesterkeTest/commit/171d65c17f3523895efc7f38d54cab7819f6b52d))
+
 ## [1.1.0](https://github.com/bmartens88/TesterkeTest/compare/v1.0.0...v1.1.0) (2025-10-30)
 
 
