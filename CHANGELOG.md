@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.2](https://github.com/bmartens88/TesterkeTest/compare/v1.1.1...v1.1.2) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** Added asset_name to upload action ([756b4bb](https://github.com/bmartens88/TesterkeTest/commit/756b4bb435a921fabcfd0445ba2523e20c956cd5))
+* **ci:** Added asset_name to upload action ([#23](https://github.com/bmartens88/TesterkeTest/issues/23)) ([969d8af](https://github.com/bmartens88/TesterkeTest/commit/969d8af2a1d11bd7f691453df29ee10bae2d0653))
+
 ## [1.1.1](https://github.com/bmartens88/TesterkeTest/compare/v1.1.0...v1.1.1) (2025-10-30)
 
 
