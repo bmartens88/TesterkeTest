@@ -70,5 +70,6 @@ jobs:
 
       # Upload NuGet package
       - name: Publish NuGet
-        run: |
-          dotnet nuget push ./artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} --source "github"
+        run: dotnet nuget push artifacts/*.nupkg
+        env:
+          PACKAGE_ID: "Calculator"
