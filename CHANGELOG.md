@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.3](https://github.com/bmartens88/TesterkeTest/compare/v1.2.2...v1.2.3) (2025-10-31)
+
+
+### Bug Fixes
+
+* **ci:** Added permissions block ([37350d5](https://github.com/bmartens88/TesterkeTest/commit/37350d518bcc84fd687bd7011cf5e44e9bee89e7))
+* **ci:** Another attempt ([cff66c5](https://github.com/bmartens88/TesterkeTest/commit/cff66c50f289a308048ebf74e5f7bf07307f7b79))
+* **ci:** Nuget publishing ([af2c666](https://github.com/bmartens88/TesterkeTest/commit/af2c6662d698873b0cab1ebf0a0fe7d1df0bcbc0))
+
 ## [1.2.2](https://github.com/bmartens88/TesterkeTest/compare/v1.2.1...v1.2.2) (2025-10-31)
 
 
