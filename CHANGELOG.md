@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.4](https://github.com/bmartens88/TesterkeTest/compare/v1.2.3...v1.2.4) (2025-10-31)
+
+
+### Bug Fixes
+
+* **ci:** Added contents:read permission ([e252b87](https://github.com/bmartens88/TesterkeTest/commit/e252b8729c7ca08015fb2bd8feaa6d3a3ad063fd))
+* **ci:** Added contents:read permission ([#40](https://github.com/bmartens88/TesterkeTest/issues/40)) ([70ef056](https://github.com/bmartens88/TesterkeTest/commit/70ef056ea3388b85dc8f0838c7350a27f8135c11))
+
 ## [1.2.3](https://github.com/bmartens88/TesterkeTest/compare/v1.2.2...v1.2.3) (2025-10-31)
 
 
