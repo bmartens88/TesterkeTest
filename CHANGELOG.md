@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.5](https://github.com/bmartens88/TesterkeTest/compare/v1.2.4...v1.2.5) (2025-10-31)
+
+
+### Bug Fixes
+
+* **ci:** Changed contents permission to write ([7ac08e0](https://github.com/bmartens88/TesterkeTest/commit/7ac08e0942995888bcef62226d5f3b6718fcd323))
+* **ci:** Changed contents permission to write ([0a96e59](https://github.com/bmartens88/TesterkeTest/commit/0a96e59d7695b7a39b8ad1312ed9e5e73f7e85ca))
+
 ## [1.2.4](https://github.com/bmartens88/TesterkeTest/compare/v1.2.3...v1.2.4) (2025-10-31)
 
 
