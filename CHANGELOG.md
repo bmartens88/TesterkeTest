@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/bmartens88/TesterkeTest/compare/v1.2.0...v1.2.1) (2025-10-31)
+
+
+### Bug Fixes
+
+* **ci:** Hopefully fixed nuget publishing ([91a2039](https://github.com/bmartens88/TesterkeTest/commit/91a203943411f66af5046c80ea2fcfdf267aec51))
+* **ci:** Hopefully fixed nuget publishing ([4270be1](https://github.com/bmartens88/TesterkeTest/commit/4270be1975d3e93da2a3308efda2890f2ef76f21))
+
 ## [1.2.0](https://github.com/bmartens88/TesterkeTest/compare/v1.1.4...v1.2.0) (2025-10-31)
 
 
