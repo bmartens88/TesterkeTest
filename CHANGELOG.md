@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.2.0](https://github.com/bmartens88/TesterkeTest/compare/v1.1.4...v1.2.0) (2025-10-31)
+
+
+### Features
+
+* **ci:** Added nuget publishing ([44f5b7b](https://github.com/bmartens88/TesterkeTest/commit/44f5b7bed68dba44411428c59e1f7c5749963348))
+* **ci:** Added nuget publishing ([#30](https://github.com/bmartens88/TesterkeTest/issues/30)) ([78bdb73](https://github.com/bmartens88/TesterkeTest/commit/78bdb73c22c9d24f942c2eb1a78a82cba9640db2))
+
+
+### Other Changes
+
+* Release ([0e1a0b0](https://github.com/bmartens88/TesterkeTest/commit/0e1a0b0a426688aa42e3f40964b59a6cd00af996))
+* Resolve merge conflicts ([585a793](https://github.com/bmartens88/TesterkeTest/commit/585a7934834b8abf1761082dbe75426d0fad164f))
+* Sync ([1884bf5](https://github.com/bmartens88/TesterkeTest/commit/1884bf5f291b6d5acf172fdf2da45dec66da6896))
+
 ## [1.1.4](https://github.com/bmartens88/TesterkeTest/compare/v1.1.3...v1.1.4) (2025-10-30)
 
 
