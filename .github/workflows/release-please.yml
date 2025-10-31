@@ -25,6 +25,8 @@ jobs:
     if: ${{ needs.release-pr.outputs.release_created }}
     runs-on: ubuntu-latest
     needs: release-pr
+    permissions:
+      packages: write
     steps:
       # Checkout of code
       - name: Checkout
@@ -70,6 +72,4 @@ jobs:
 
       # Upload NuGet package
       - name: Publish NuGet
-        run: dotnet nuget push artifacts/*.nupkg --api-key ${{ secrets.GITHUB_TOKEN }}
-        env:
-          PACKAGE_ID: "Calculator"
+        run: dotnet nuget push artifacts/*.nupkg
